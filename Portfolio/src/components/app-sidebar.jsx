@@ -2,32 +2,36 @@ import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+// components/app-sidebar.jsx
 
-export function AppSidebar() {
+export function AppSidebar({ setView }) { // Receive the prop
   return (
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Kaiser Paul Nonog</SidebarGroupLabel>
           <SidebarMenu>
+            
+            {/* Home Button */}
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#"><span>Home</span></a>
+              <SidebarMenuButton onClick={() => setView("home")}>
+                <span>Home</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
+
+            {/* Projects Button */}
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#"><span>Projects</span></a>
+              <SidebarMenuButton onClick={() => setView("projects")}>
+                <span>Projects</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
+
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  )
+  );
 }
