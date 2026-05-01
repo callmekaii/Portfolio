@@ -2,7 +2,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/comp
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-export function BlogCard({ title, description, image }) {
+export function BlogCard({ title, description, image, setView }) {
   return (
     <Card className="relative mx-auto w-full max-w-sm overflow-hidden">
       {/* 1. The Dark Overlay - Makes text pop if it's over the image */}
@@ -24,7 +24,9 @@ export function BlogCard({ title, description, image }) {
       </CardHeader>
 
       <CardFooter>
-        <Button className="w-full">Read Article</Button>
+        <Button className="w-full" onClick={() => setView(title)}>
+          Read Article
+        </Button>
       </CardFooter>
     </Card>
   )

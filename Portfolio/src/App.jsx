@@ -3,6 +3,7 @@ import { AppSidebar } from "@/components/app-sidebar"
 import { BlogCard } from "@/components/blog-card"
 import { useState } from "react"
 import { motion, AnimatePresence } from "motion/react"
+import { Button } from "@/components/ui/button"
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("home");
@@ -44,7 +45,7 @@ export default function App() {
                 My Portfolio
               </h2>
               <p className="text-lg text-muted-foreground max-w-[700px]">
-                Just a CS student at UC building stuff that makes sense. Currently messing around with local AI, voice assistants, and making sure my UI doesn't look like it's from 2005.
+                Just a CS student at UC building stuff that makes sense. Currently messing around with local AI or AI in general, and making sure my UI doesn't look like it's from 2005.
               </p>
             </motion.section>
           )}
@@ -67,19 +68,36 @@ export default function App() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <BlogCard
                     title="Design Systems"
+                    setView={setActiveTab}
                     description="How to build a consistent UI language using atomic design principles and React components."
                   />
                   <BlogCard
                     title="Mastering State"
+                    setView={setActiveTab}
                     description="A deep dive into useState, useReducer, and why lifting state up is crucial for clean code."
                   />
                   <BlogCard
                     title="Responsive Layouts"
+                    setView={setActiveTab}
                     description="Solving the common 'off-center' issues when working with dynamic sidebars and flex containers."
                   />
                 </div>
             </motion.div>
           )}
+
+          {/* DYNAMIC BLOG VIEW */}
+            {!["home", "projects"].includes(activeTab) && (
+              <motion.article key="blog-view" {...tabVariants}>
+                <Button variant="ghost" onClick={() => setActiveTab("projects")} className="mb-4">
+                  ← Back to Projects
+                </Button>
+                <h2 className="text-4xl font-bold">{activeTab}</h2>
+                <div className="mt-6 text-muted-foreground">
+                  {/* You can filter your blog content based on the activeTab title here */}
+                  <p>This is where the content for {activeTab} would go.</p>
+                </div>
+              </motion.article>
+            )}
           </AnimatePresence>
 
           <footer className="mt-20 py-6 border-t text-center text-sm text-muted-foreground">
