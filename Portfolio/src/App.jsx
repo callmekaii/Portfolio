@@ -14,6 +14,13 @@ export default function App() {
   };
 
   const transition = { duration: 0.2, ease: "easeInOut" };
+
+  const projectContent = {
+    "Design Systems": "This is where the content for Design Systems would go.",
+    "Mastering State": "This is where the content for Mastering State would go.",
+    "Responsive Layouts": "This is where the content for Responsive Layouts would go."
+  };
+
   return (
     <SidebarProvider>
       <AppSidebar setView={setActiveTab} />
@@ -93,8 +100,7 @@ export default function App() {
                 </Button>
                 <h2 className="text-4xl font-bold">{activeTab}</h2>
                 <div className="mt-6 text-muted-foreground">
-                  {/* You can filter your blog content based on the activeTab title here */}
-                  <p>This is where the content for {activeTab} would go.</p>
+                  <p>{projectContent[activeTab] || `${activeTab} section is under construction.`}</p>
                 </div>
               </motion.article>
             )}
