@@ -15,11 +15,23 @@ export default function App() {
 
   const transition = { duration: 0.2, ease: "easeInOut" };
 
-  const projectContent = {
-    "Design Systems": "This is where the content for Design Systems would go.",
-    "Mastering State": "This is where the content for Mastering State would go.",
-    "Responsive Layouts": "This is where the content for Responsive Layouts would go."
-  };
+const projectContent = {
+  "Gem Minai - Discord AI Hoster": {
+    text: "Gem Minai is a custom Discord bot hoster built using C# and the DSharpPlus library. Unlike simple scripts, this is a compiled executable that handles the integration of Google’s Gemini AI API directly into community servers. It features a hybrid command system supporting both traditional prefix commands and modern Discord Slash Commands for a better user experience. I also implemented a persistent config.json system to securely handle Discord Tokens and API keys.",
+    link: "https://github.com/callmekaii/Gem-Minai",
+    image: "https://github.com/user-attachments/assets/cf4df805-1c33-40a8-8ac4-527a8f027c53"
+  },
+  "Mastering State": {
+    text: "Deep dive into React state management...",
+    link: "#"
+  },
+  "Responsive Layouts": {
+    text: "Solving flexbox headaches...",
+    link: "#
+  }
+};
+
+
 
   return (
     <SidebarProvider>
@@ -74,9 +86,11 @@ export default function App() {
                 </section>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <BlogCard
-                    title="Design Systems"
+                    title="Gem Minai - Discord AI Hoster"
                     setView={setActiveTab}
-                    description="How to build a consistent UI language using atomic design principles and React components."
+                    image = "https://github.com/user-attachments/assets/cf4df805-1c33-40a8-8ac4-527a8f027c53"
+                    description="A C# powered Discord bot framework featuring Gemini AI integration supporting slash commands."
+                    badge="C# Project"
                   />
                   <BlogCard
                     title="Mastering State"
@@ -99,8 +113,26 @@ export default function App() {
                   ← Back to Projects
                 </Button>
                 <h2 className="text-4xl font-bold">{activeTab}</h2>
+                {projectContent[activeTab]?.image && (
+                  <div className="w-full mb-8 overflow-hidden rounded-xl border bg-muted shadow-sm">
+                    <img 
+                      src={projectContent[activeTab].image} 
+                      alt={activeTab}
+                      className="aspect-[3/1] w-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                )}
                 <div className="mt-6 text-muted-foreground">
-                  <p>{projectContent[activeTab] || `${activeTab} section is under construction.`}</p>
+                  <p>{projectContent[activeTab]?.text || `${activeTab} section is under construction.`}</p>
+                  <p className = "mt-4">View{" "}
+                    <a 
+                      href={projectContent[activeTab]?.link || "#"} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className = "text-blue-500 hover:text-blue-700">
+                        Github Link
+                      </a>
+                    </p>
                 </div>
               </motion.article>
             )}

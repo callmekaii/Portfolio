@@ -2,7 +2,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/comp
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-export function BlogCard({ title, description, image, setView }) {
+export function BlogCard({ title, description, image, setView, badge }) {
   return (
     <Card className="relative mx-auto w-full max-w-sm overflow-hidden">
       {/* 1. The Dark Overlay - Makes text pop if it's over the image */}
@@ -12,12 +12,12 @@ export function BlogCard({ title, description, image, setView }) {
       <img
         src={image || "https://images.unsplash.com/photo-1498050108023-c5249f4df085"}
         alt="Cover"
-        className="relative z-0 aspect-video w-full object-cover brightness-75 grayscale hover:grayscale-0 transition-all duration-300"
+        className="relative z-0 aspect-video w-full object-cover brightness-100 hover:grayscale-0 transition-all duration-300"
       />
 
       <CardHeader className="relative z-20">
         <div className="mb-2">
-          <Badge variant="secondary">Featured</Badge>
+          <Badge variant="secondary">{badge || "Featured"}</Badge>
         </div>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
