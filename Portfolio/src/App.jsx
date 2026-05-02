@@ -27,7 +27,7 @@ const projectContent = {
   },
   "Responsive Layouts": {
     text: "Solving flexbox headaches...",
-    link: "#
+    link: "#"
   }
 };
 
