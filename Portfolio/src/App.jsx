@@ -4,6 +4,7 @@ import { BlogCard } from "@/components/blog-card"
 import { useState } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import { Button } from "@/components/ui/button"
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("home");
@@ -80,6 +81,9 @@ const projectContent = {
           <h1 className="text-sm font-bold tracking-tight uppercase text-muted-foreground">
             Portfolio v1.0
           </h1>
+          <div className="ml-auto flex items-center">
+            <AnimatedThemeToggler />
+          </div>
         </header>
 
         <div className="p-6 md:p-10 lg:p-12 max-w-[1400px] mx-auto">

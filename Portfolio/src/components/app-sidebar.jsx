@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/sidebar"
 // components/app-sidebar.jsx
 import { Home, Briefcase} from "lucide-react"
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
+
 
 
 
@@ -39,9 +39,6 @@ const ICONS = {
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu>
-            <div className="flex justify-end mt-2 mr-5 mb-5">
-              <AnimatedThemeToggler className="size-1" />
-            </div>
             {/* Home Button */}
             <SidebarMenuItem>
               <SidebarMenuButton onClick={() => setView("home")}>
