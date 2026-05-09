@@ -67,7 +67,7 @@ const ICONS = {
           <a href="https://www.facebook.com/kaiser.paul.178986/" target="_blank" className="hover:text-primary">
             <BrandIcon path={ICONS.facebook} className="size-5" />
           </a>
-          <a href="mailto:your-email@example.com" className="hover:text-primary">
+          <a href="mailto:kaiserx1414@gmail.com" className="hover:text-primary">
             <BrandIcon path={ICONS.mail} className="size-5" />
           </a>
         </div>
