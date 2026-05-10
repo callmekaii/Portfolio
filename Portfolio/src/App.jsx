@@ -75,7 +75,7 @@ const projectContent = {
 },
 
 "Anathema": {
-  text: "Anathema is a dark fantasy RPG engineered to explore the collision between humanity and a marginalized faction known as 'Anathemans.' The project features a robust system architecture designed to translate a complex narrative—centered around five indifferent Deities—into a playable, high-stakes experience. Currently in the development phase, the core systems prioritize narrative logic and fluid mechanical interaction.",
+  text: "Anathema is a dark fantasy RPG engineered to explore the collision between humanity and a marginalized faction known as 'Anathemans.' The project features a system architecture designed to translate a complex narrative—centered around five indifferent Deities—into a playable, high-stakes experience. Currently in the development phase, the movement, visuals and sound effects can be experienced through the project link provided down below.",
   link: "https://play.unity.com/en/games/01c27b67-30b3-43b8-ad56-08776a0f6dde/anathemaitchfiles",
   image: "https://cdn.discordapp.com/attachments/946858026160230430/1477310372456300564/IMG_20260227_103719_410.jpg?ex=6a0094ff&is=69ff437f&hm=8e05df6311a21fc9cec83af6a3561cfc10bf33549c5960c799f24144b4ceb64d", 
   features: [
@@ -170,7 +170,7 @@ const projectContent = {
                     setView={setActiveTab}
                     image = {projectContent["Agapay"].image}
                     description="An NGO promoting the reuse and upcycling of items by incentivizing users to help make the world a better place."
-                    badge="Startup Project"
+                    badge="Startup Project / Award Winning"
                   />
                   <BlogCard
                     title="Anathema"
