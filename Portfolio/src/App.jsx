@@ -6,6 +6,9 @@ import { motion, AnimatePresence } from "motion/react"
 import { Button } from "@/components/ui/button"
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 import { useEffect } from "react"
+import agapayImage from "./assets/Agapay.jpg"
+import anathemaImage from "./assets/Anathema.jpg"
+
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("home");
@@ -65,7 +68,7 @@ const projectContent = {
   "Agapay": {
   text: "Agapay is an NGO that promotes the reuse and upcycling of items by incentivizing users to help make the world a better place. It is an all-in-one platform where people can be part of an ecocentric community, donate, request, earn money, and more. An award-winning (PSC 9 Regional Finalist) circular economy platform I co-founded and designed, currently being brought to life through user-centric development.",
   link: "https://www.facebook.com/app.agapay",
-  image: "https://media.discordapp.net/attachments/946858026160230430/1298999468779110430/Last_Page.jpg?ex=6a008607&is=69ff3487&hm=185bd4e8e50a958e41e8788ae129843250a38cb5d47d53c618016e37e40b5b84&=&format=webp&width=513&height=513",
+  image: agapayImage,
   features: [
     "Profile Personalization - Add bios, flairs, verification, and agawards",
     "Gamified User Engagement with Points, Levels, and Leaderboards",
@@ -77,7 +80,7 @@ const projectContent = {
 "Anathema": {
   text: "Anathema is a dark fantasy RPG engineered to explore the collision between humanity and a marginalized faction known as 'Anathemans.' The project features a system architecture designed to translate a complex narrative—centered around five indifferent Deities—into a playable, high-stakes experience. Currently in the development phase, the movement, visuals and sound effects can be experienced through the project link provided down below.",
   link: "https://play.unity.com/en/games/01c27b67-30b3-43b8-ad56-08776a0f6dde/anathemaitchfiles",
-  image: "https://cdn.discordapp.com/attachments/946858026160230430/1477310372456300564/IMG_20260227_103719_410.jpg?ex=6a0094ff&is=69ff437f&hm=8e05df6311a21fc9cec83af6a3561cfc10bf33549c5960c799f24144b4ceb64d", 
+  image: anathemaImage, 
   features: [
     "Engineered core combat & movement systems",
     "Branching endings based on player choices",
