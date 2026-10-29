@@ -35,7 +35,7 @@ const ICONS = {
 };
   
   return (
-    <Sidebar>
+    <Sidebar variant="floating" className="p-4 opacity-75 hover:opacity-100 transition-opacity duration-300">
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu>

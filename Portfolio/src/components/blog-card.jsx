@@ -5,7 +5,7 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 
 export function BlogCard({ title, description, image, setView, badge }) {
   return (
-    <Card className="relative mx-auto w-full max-w-sm overflow-hidden flex flex-col">
+    <Card className="relative mx-auto w-full max-w-sm overflow-hidden flex flex-col opacity-75 hover:opacity-100 transition-all duration-300">
       
       {/* 1. WRAPPER FOR IMAGE + OVERLAY */}
       <div className="relative aspect-video w-full overflow-hidden">
